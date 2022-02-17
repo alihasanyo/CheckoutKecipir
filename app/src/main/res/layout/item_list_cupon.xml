@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rounded"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:layout_marginLeft="15dp"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/tv_title_kupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title Kupon"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_gravity="center_vertical"
+                android:gravity="left" />
+
+            <TextView
+                android:id="@+id/tv_valid_kupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Valid Kupon"
+                android:textSize="11sp"
+                android:textColor="@color/colorBlack"
+                android:layout_gravity="center_vertical"
+                android:gravity="left" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cek_kupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="4"
+            android:gravity="center_horizontal"
+            android:text="Detail"
+            android:textColor="@color/green_600"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

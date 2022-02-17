@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- preferences -->
+    <string name="pref_VABank">VA_Bank</string>
+    <string name="pref_DateDelivery">DateDeliver</string>
+    <string name="pref_Cupon">PROMO</string>
+</resources>

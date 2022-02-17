@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_200"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_info_cekout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/green_100"
+                    android:orientation="horizontal"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:id="@+id/infocekout_ya"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Pesananmu proses..."
+                        android:gravity="left"
+                        android:textSize="10sp"
+                        android:textColor="@color/grey_700"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_infoCekout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Tutup"
+                        android:gravity="center"
+                        android:textSize="10sp"
+                        android:textColor="@color/green_700"
+                        android:layout_weight="3"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="5dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Produk dibeli"
+                        android:gravity="left"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:layout_gravity="center_horizontal" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"/>
+
+                    <ListView
+                        android:id="@+id/list_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:divider="@color/grey_300"
+                        android:dividerHeight="1dp"
+                        android:visibility="visible"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="2dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_tambah_belanja"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/add_icon"
+                            app:tint="@color/green_500"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/create_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Buat catatan"
+                        android:gravity="left"
+                        android:textSize="11sp"
+                        android:textColor="@color/green_700"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/ly_noted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rounded"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/et_noted"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Tulis catatan produk dibeli"
+                            android:textSize="11sp"
+                            android:gravity="left"
+                            android:textColor="@color/grey_800"
+                            android:maxLines="1"
+                            android:maxLength="150"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pengiriman dan Pembayaran"
+                        android:gravity="left"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:layout_gravity="center_horizontal" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        app:cardUseCompatPadding="false"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    app:srcCompat="@drawable/home"
+                                    app:tint="@color/green_500" />
+
+                                <TextView
+                                    android:id="@+id/deliv_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pengiriman dan Pembayaran"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/colorBlack"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="2"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ubah"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/green_500"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="right"/>
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    app:srcCompat="@drawable/arrow_right_icon"
+                                    app:tint="@color/green_500" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:background="@color/grey_200"/>
+
+                            <LinearLayout
+                                android:id="@+id/detil_calendar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    app:srcCompat="@drawable/calendar_icon"
+                                    app:tint="@color/green_500" />
+
+                                <TextView
+                                    android:id="@+id/datedelivery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tanggal Pengiriman"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/colorBlack"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="2"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ubah"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/green_500"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="4"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="right"/>
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    app:srcCompat="@drawable/arrow_right_icon"
+                                    app:tint="@color/green_500" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:background="@color/grey_200"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    app:srcCompat="@drawable/check_circle_icon"
+                                    app:tint="@color/green_500" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center_vertical"
+                                    android:layout_weight="2">
+
+                                    <TextView
+                                        android:id="@+id/delivery1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Pengiriman dan Pembayaran"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/colorBlack"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"/>
+
+                                    <TextView
+                                        android:id="@+id/delivery2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Pengiriman dan Pembayaran"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/grey_800"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"/>
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/ongkir_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp 20.000"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/grey_600"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="5"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="right"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:background="@color/grey_200"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_margin="10dp"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_VA"
+                                    android:layout_width="40dp"
+                                    android:layout_height="20dp"
+                                    app:srcCompat="@drawable/check_circle_icon" />
+
+                                <TextView
+                                    android:id="@+id/tv_VA"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mandiri Virtual Account"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/colorBlack"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="2"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/lay_va"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:background="@drawable/border_linear"
+                                    android:layout_weight="3"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ubah"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/green_500"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="5"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="right"/>
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        app:srcCompat="@drawable/arrow_right_icon"
+                                        app:tint="@color/green_500" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lay_va1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:background="@drawable/border_linear"
+                                    android:layout_weight="3"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Pilih"
+                                        android:textSize="11sp"
+                                        android:textColor="@color/green_500"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="5"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="right"/>
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        app:srcCompat="@drawable/arrow_right_icon"
+                                        app:tint="@color/green_500" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kemasan"
+                        android:gravity="left"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:layout_gravity="center_horizontal" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/ly_"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/loading_icon"
+                            app:tint="@color/blue_500" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="150dp">
+
+                            <TextView
+                                android:id="@+id/kemasan1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Kemasan1"
+                                android:gravity="left"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+                                android:layout_gravity="center_horizontal" />
+
+                            <TextView
+                                android:id="@+id/kemasan2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Kemasan2"
+                                android:gravity="left"
+                                android:textSize="12sp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_gravity="center_horizontal" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="10dp"/>
+
+                            <LinearLayout
+                                android:id="@+id/ly_back_kemasan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_rounded"
+                                android:backgroundTint="@color/blue_700"
+                                android:layout_marginBottom="15dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/kemasan3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kemasan3"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorWhite"
+                                    android:layout_gravity="center_horizontal" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ly_cancel_kemasan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/check_icon"
+                            app:tint="@color/blue_500" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Anda telah mengajukan pengembalian kemasan"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"/>
+
+                        <TextView
+                            android:id="@+id/tvcancel_kemasan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Batal"
+                            android:textSize="11sp"
+                            android:textColor="@color/green_500"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="5"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/lay_cupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            app:srcCompat="@drawable/cupon_icon"
+                            app:tint="@color/green_500" />
+
+                        <TextView
+                            android:id="@+id/tv_no_cupon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Makin Hemat Pakai Kupon"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:id="@+id/lay_ada_kupon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/typeCupon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Jenis Kupon"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+                                android:layout_gravity="center_vertical" />
+
+                            <TextView
+                                android:id="@+id/qty_kupon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="jumlah kupon"
+                                android:textSize="11sp"
+                                android:textColor="@color/grey_800"
+                                android:layout_gravity="center_vertical" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            app:srcCompat="@drawable/keyboard_arrow_icon"
+                            app:tint="@color/green_500" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="3"
+                            android:layout_marginRight="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total Bayar"
+                                android:textSize="13sp"
+                                android:textColor="@color/colorBlack"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_total_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp38.500"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/orange_600"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="8"/>
+
+                                <ImageView
+                                    android:id="@+id/iv_total_price"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="0.4"
+                                    android:layout_marginRight="50dp"
+                                    app:srcCompat="@drawable/arrow_up_icon"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/btn_bayar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rounded"
+                            android:backgroundTint="@color/orange_400"
+                            android:layout_weight="3"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Bayar"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:textColor="@color/colorWhite"
+                                android:layout_gravity="center_horizontal" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

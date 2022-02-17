@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <RadioGroup
+            android:id="@+id/rg_datedeli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_datedeli"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Jumat, 18 Februari 2020"
+                android:textSize="12sp"
+                android:textColor="@color/grey_700"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</RelativeLayout>
